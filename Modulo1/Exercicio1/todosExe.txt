@@ -42,3 +42,113 @@ public class Exercicio1 {
 EXERCICIO 2
 
 
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		/*
+		 Faça um programa que entre com três números e coloque em ordem crescente.
+		 * */	
+		
+	Scanner in = new Scanner(System.in);
+	int[] vetor = new int [3];
+	
+	for(int i = 0; i < vetor.length; i++) {
+		System.out.println("Insira o valor: ");
+		vetor[i] = in.nextInt();
+		
+	}
+	//coloca o vetor em ordem crescente
+	Arrays.sort(vetor);
+	
+	System.out.println("Ordem crescente: ");
+	
+	for(int i = 0; i < vetor.length; i++) {
+		System.out.print(vetor[i] + " ");
+	}
+	
+	
+	}
+
+}
+
+
+EXERCICIO 3
+
+
+import java.util.Scanner;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		/*
+		Faça um programa que receba a idade de uma pessoa e mostre na saída em qual
+		categoria ela se encontra:
+		10-14 infantil
+		15-17 juvenil
+		18-25 adulto		
+		*/	
+		
+	Scanner in = new Scanner(System.in);
+	
+	int idade;
+		
+	System.out.print("Insira a sua idade: ");
+	idade = in.nextInt();
+	
+	
+	if(idade <= 10 && idade <= 14) {
+		System.out.println("Categoria Infantil");
+	}
+	
+
+	if(idade <= 15 && idade <= 17) {
+		System.out.println("Categoria Juvenil");
+	}
+	
+
+	if(idade >= 18 && idade <= 25) {
+		System.out.println("Categoria Adulto");
+	}
+	
+	
+	}
+
+}
+
+EXERCICIO 4
+
+import java.math.*;
+import java.util.Scanner;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		/*
+		Faça um programa em que permita a entrada de um número qualquer e exiba se este
+		número é par ou ímpar. Se for par exiba também a raiz quadrada do mesmo; se for
+		ímpar exiba o número elevado ao quadrado.	
+		*/	
+		
+	Scanner in = new Scanner(System.in);
+	int Numero = 0, raiz, elevado;
+	
+	System.out.print("Insira um numer qualquer: ");
+	Numero = in.nextInt();
+	
+	if(Numero % 2 == 0) {
+		raiz = (int) Math.sqrt(Numero);
+		System.out.println("Esse numero é par, e sua raiz quadrada é : " + raiz);
+	}
+	
+	else {
+		elevado = (int) Math.pow(Numero,2);
+		System.out.print("Esse numero é impar, e seu numero ao quadrado é: " + elevado);
+	}
+	
+	
+	}
+
+}
