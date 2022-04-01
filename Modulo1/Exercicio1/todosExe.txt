@@ -1,0 +1,44 @@
+EXERCICIO 1
+
+import java.util.Scanner;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		/*
+		 Faça um programa que receba três inteiros e diga qual deles é o maior.
+		 * */
+		
+		Scanner ler = new Scanner (System.in);
+		
+		int n = 3, maiorNum = 0;
+		
+		int vetor[] = new int[n];
+		
+		for(int i = 0; i < n; i++) {
+			System.out.print("Insira o valor: ");
+			vetor[i] = ler.nextInt();
+			
+			if(vetor[i] > maiorNum) {
+				maiorNum = vetor[i];
+			}
+			
+		}
+		System.out.println("\n----------------Informando números digitados---------------------\n");
+		for (int cn : vetor) {
+			 System.out.println("Número: " + cn);
+		}
+		
+		System.out.println("O maior é: " + maiorNum);		
+	
+	}
+
+}
+
+
+EXERCICIO 2
+
+
