@@ -1,0 +1,234 @@
+EXERCICIO 1
+
+
+public class Principal {
+
+	public static void main(String[] args) {
+		/*
+		 * Informar todos os números de 1000 a 1999 que quando divididos por 11 obtemos
+		 * resto = 5.
+		 */
+		for(int numero = 1000; numero <= 1999; numero++) {
+			if(numero % 11 == 5) {
+				System.out.print(numero);
+				System.out.print(" ");
+			}
+		}
+	}
+
+}
+
+EXERCICIO 2
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		/*
+		 * Ler 10 números e imprimir quantos são pares e quantos são ímpares. (FOR)
+		 */
+		int pares = 0, impares = 0, num = 0;
+		Scanner ler = new Scanner(System.in);
+
+		for (int contador = 1; contador <= 10; contador++) {
+			System.out.print("Insira um numero: ");
+			num = ler.nextInt();
+			
+			if (num % 2 == 0) {
+				pares++;
+			} else {
+				impares++;
+			}
+		}
+
+		System.out.printf("Há %d pares e %d impares", pares, impares);
+	}
+
+}
+
+
+EXERCICIO 3
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		/*
+		 * Solicitar a idade de várias pessoas e imprimir: Total de pessoas com menos de
+		 * 21 anos. Total de pessoas com mais de 50 anos. O programa termina quando
+		 * idade for =-99. (WHILE)
+		 */
+
+		int idade = 0, menorVinteUm = 0, maiorCin = 0;
+		Scanner ler = new Scanner(System.in);
+
+		while(idade!=-99) {
+			System.out.print("Insira a idade: ");
+			idade = ler.nextInt();
+				if(idade>=0 && idade<=21) {
+					menorVinteUm++;
+				}
+				if(idade >=50) {
+					maiorCin++;
+				}
+			
+			}
+
+		System.out.printf("Há %d com menos de 21 e %d com mais de cinquenta", menorVinteUm, maiorCin);
+	}
+
+}
+
+
+EXERCICIO 4
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		/*
+		 * Uma empresa desenvolveu uma pesquisa para saber as características
+		 * psicológicas dos indivíduos de uma região. Para tanto, a cada uma das pessoas
+		 * era perguntado: idade, sexo (1-feminino / 2-masculino / 3-Outros), e as
+		 * opções (1, se a pessoa era calma; 2, se a pessoa era nervosa e 3, se a pessoa
+		 * era agressiva). Pede-se para elaborar um sistema que permita ler os dados de
+		 * 150 pessoas, calcule e mostre: (WHILE) 
+		 * número de pessoas calmas;
+		 * número de mulheres nervosas;
+		 * número de homens agressivos;
+		 * número de outros calmos;
+		 * número de pessoas nervosas com mais de 40 anos;
+		 * número de pessoas calmas com menos de 18 anos.
+		 */
+
+		int idade = 0, opcao = 0, sexo = 0;
+		int numP = 0, numPessoa1 = 0,numPessoa2 = 0,numPessoa3 = 0;
+		int mulherNervosa = 0, homemAgressivo = 0, outrosCalmos = 0;
+		int nervosaAcimaQuarente = 0, calmaMenosDoito = 0;
+		
+		System.out.println("----EXERCICIO 4----");
+		Scanner ler = new Scanner(System.in);
+
+		while (numP < 2) {
+			System.out.print("Insira a idade: ");
+			idade = ler.nextInt();
+
+			System.out.println("Insira o sexo");
+			System.out.println("1-Feminino\n2-Masculino\n3-Outros");
+			sexo = ler.nextInt();
+			
+			System.out.println("Insira a uma opção abaixo: ");
+			System.out.println("1-Calma\n2-Nervosa\n3-Agressiva\n\n");
+			opcao = ler.nextInt();
+			
+			if(opcao == 1) {
+				numPessoa1++;
+			}
+			
+			if(opcao == 2) {
+				numPessoa2++;
+			}
+			if(opcao == 3) {
+				numPessoa3++;
+			}
+			
+			System.out.println("  ");
+			
+			//Verifia numero de mulheres nervosas
+			if(sexo == 1 && opcao == 2) {
+				mulherNervosa++;
+			}
+			//Verifica numero de homens agressivos
+			if(sexo == 2 && opcao == 3) {
+				homemAgressivo++;
+			}
+			//verifica numero de "outros" calmos
+ 			if(sexo == 3 && opcao == 1) {
+				outrosCalmos++;
+			}
+ 			//Verifica pessoa nervosa com mais de 40
+			if(idade > 40 && opcao == 2) {
+				nervosaAcimaQuarente++;
+			}
+			//Verifica pessoa calma com menos de 18
+			if(idade < 18 && opcao == 1) {
+				calmaMenosDoito++;
+			}
+			numP++;
+
+		}
+		System.out.printf("Há %d pessoas calmas, %d mulheres nervosa, %d homens agressivos, %d opcao outros calmos\n%d pessoas nervosas com mais de 40 anos e %d pessoas calmas com menos de 18",numPessoa1, mulherNervosa, homemAgressivo,outrosCalmos,nervosaAcimaQuarente,calmaMenosDoito);
+	}
+}
+
+EXERCICIO 5
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		/*
+		 * Crie um programa que leia um número do teclado até que encontre um número
+		 * igual a zero. No final, mostre a soma dos números digitados.(DO...WHILE)
+		 */
+
+		Scanner ler = new Scanner(System.in);
+		int numero = 0, soma = 0;
+		boolean verdadeiro = true;
+		
+		do {
+			System.out.print("Insira um numero: ");
+			numero = ler.nextInt();
+			
+			soma+=numero;
+			
+			if(numero == 0) {
+				verdadeiro = false;
+			}
+		}while(verdadeiro);
+		
+		System.out.printf("A soma de todos os numero é %d",soma);
+		
+	}
+}
+
+EXERCICIO 6
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		/*
+		 * Escrever um programa que receba vários números inteiros no teclado. E no
+		 * final imprimir a média dos números múltiplos de 3. Para sair digitar
+		 * 0(zero).(DO...WHILE)
+		 */
+
+		Scanner ler = new Scanner(System.in);
+		int numero = 0, media = 0, soma = 0, cont = 0;
+		boolean verdadeiro = true;
+
+		do {
+			System.out.print("Insira um numero: ");
+			numero = ler.nextInt();
+
+			if(numero % 3 == 0) {
+				soma+=numero;
+				cont++;
+			}
+			
+
+			if (numero == 0) {
+				verdadeiro = false;
+			}
+		} while (verdadeiro);
+		
+		media = soma / cont;
+		System.out.printf("A média de todos os numero multiplos de 3 é %d", media);
+
+	}
+}
