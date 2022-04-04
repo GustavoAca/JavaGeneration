@@ -7,6 +7,7 @@ Aqui está a lista de exercicios em Java, com o foco de treino de raciocinio ló
 Aula  | Data | Assunto
 :---------: | :------: | :---------:
 Exercicio 1 | 01/04/2022 | Laço de decisão
+Exercicio 2 | 04/04/2022 | Laço de repetição
 
 
 ## Como rodar o código
