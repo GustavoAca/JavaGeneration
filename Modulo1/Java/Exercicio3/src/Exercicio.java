@@ -1,6 +1,4 @@
 import java.util.Random;
-import java.util.Scanner;
-
 public class Exercicio {
   public static void main(String[] args) {
     /*
