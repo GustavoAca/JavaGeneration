@@ -8,7 +8,7 @@ Aula  | Data | Assunto
 :---------: | :------: | :---------:
 Exercicio 1 | 01/04/2022 | Laço de decisão
 Exercicio 2 | 04/04/2022 | Laço de repetição
-
+Exercicio 3 | 05/04/2022 | Vetor e Matriz
 
 ## Como rodar o código
 
