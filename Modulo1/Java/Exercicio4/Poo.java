@@ -26,9 +26,19 @@ public class Poo {
      * console.
      * 
      */
-
+/*
     ContaBancaria cb = new ContaBancaria(false, true, 1750, 115484);
+    ContaBancaria cc = new ContaBancaria(true, false, 184, 115254);
 
+      cc.Status();
       cb.Status();
+      */
+
+      Paciente pc = new Paciente(true, "Geralt", "6589874514", "Amoxilina e dipirona de 8h/8h");
+      Paciente pc2 = new Paciente(false, "Giratina", "6589874514", "Amoxilina e dipirona de 8h/8h");
+
+      pc.Status();
+
+      pc2.Status();
   }
 }
