@@ -10,6 +10,7 @@ Exercicio 1 | 01/04/2022 | Laço de decisão
 Exercicio 2 | 04/04/2022 | Laço de repetição
 Exercicio 3 | 05/04/2022 | Vetor e Matriz
 Exercicio 4 | 06/04/2022 | POO
+Exercicio 5 | 07/04/2022 | Herança e encapsulamento
 
 ## Como rodar o código
 

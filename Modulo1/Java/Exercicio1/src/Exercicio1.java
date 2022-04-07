@@ -6,9 +6,9 @@ public class Exercicio1 {
 	public static void main(String[] args) {
 
 		/*
-		 * Faça um programa em que permita a entrada de um número qualquer e exiba se
-		 * este número é par ou ímpar. Se for par exiba também a raiz quadrada do mesmo;
-		 * se for ímpar exiba o número elevado ao quadrado.
+		 * Faï¿½a um programa em que permita a entrada de um nï¿½mero qualquer e exiba se
+		 * este nï¿½mero ï¿½ par ou ï¿½mpar. Se for par exiba tambï¿½m a raiz quadrada do mesmo;
+		 * se for ï¿½mpar exiba o nï¿½mero elevado ao quadrado.
 		 */
 
 		Scanner leia = new Scanner(System.in);
@@ -18,13 +18,13 @@ public class Exercicio1 {
 		numero = leia.nextInt();
 
 		if (numero % 2 == 0) {
-			// essa função pega o numero e descobre sua raiz
+			// essa funï¿½ï¿½o pega o numero e descobre sua raiz
 			raiz = (float) Math.sqrt(numero);
-			System.out.printf("O numero %d é par, e sua raiz é %f", numero, raiz);
+			System.out.printf("O numero %d ï¿½ par, e sua raiz ï¿½ %f", numero, raiz);
 		} else {
-			// essa função faz o numero recebido ser elevado ao expoente desejado
+			// essa funï¿½ï¿½o faz o numero recebido ser elevado ao expoente desejado
 			elevado = (int) Math.pow(numero, 2);
-			System.out.println("O numero " + numero + " é impar, se elevado é: " + elevado);
+			System.out.println("O numero " + numero + " ï¿½ impar, se elevado ï¿½: " + elevado);
 		}
 	}
 }
