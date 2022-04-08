@@ -11,6 +11,7 @@ Exercicio 2 | 04/04/2022 | Laço de repetição
 Exercicio 3 | 05/04/2022 | Vetor e Matriz
 Exercicio 4 | 06/04/2022 | POO
 Exercicio 5 | 07/04/2022 | Herança e encapsulamento
+Exercicio 6 | 08/04/2022 | Polimorfismo 
 
 ## Como rodar o código
 
