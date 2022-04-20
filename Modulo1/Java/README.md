@@ -13,7 +13,7 @@ Exercicio 4 | 06/04/2022 | POO
 Exercicio 5 | 07/04/2022 | Herança e encapsulamento
 Exercicio 6 | 10/04/2022 | herança e polimorfismo
 Exercicio 7 | 11/04/2022 | List
-Exercicio 8 | 08/04/2022 | Polimorfismo 
+
 
 
 ## Como rodar o código
