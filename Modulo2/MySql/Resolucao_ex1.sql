@@ -77,6 +77,7 @@ VALUES("xbox", "usado para jogar", 1520.00, "series x"),
     ("Placa de som", "usado para gravar com mais qualidade o som", 420.00, "series k954"),
     ("Ps1", "Usado para jogar", 620.99, "Init");
     
+    UPDATE tb_produtos SET nome = "Nintendo",modelo = "Switch" where id= 2;
     SELECT * FROM tb_produtos;
     
     SELECT id ,nome, valor 
@@ -117,13 +118,18 @@ VALUES("xbox", "usado para jogar", 1520.00, "series x"),
     ("Gabriele","Tarde", "Analise de sistemas",4, 10
     );
 
+	UPDATE tb_estudante 
+    SET nota = 10 
+    WHERE id = 1;
+    
+    
     SELECT * 
     FROM tb_estudante
 	WHERE nota < 7;
     
     SELECT * 
     FROM tb_estudante
-	WHERE nota < 7;
+	WHERE nota = 10;
 
 /*
 	ANOTAÇÕES
