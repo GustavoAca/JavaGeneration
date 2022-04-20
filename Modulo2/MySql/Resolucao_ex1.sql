@@ -101,6 +101,7 @@ VALUES("xbox", "usado para jogar", 1520.00, "series x"),
     curso VARCHAR(255),
     semestre INT ,
     nota FLOAT(3,1),
+    
     PRIMARY KEY(id)
   );
   
