@@ -1,5 +1,7 @@
 package com.generation.blogpessoal.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,6 +34,8 @@ public class PostagemModel {
 	@NotNull
 	@Size(min=4, max=100)
 	private String texto;
+	
+	private Date date = new java.sql.Date(System.currentTimeMillis());
 
 	//getters e setters dos atributos do nosso objeto/tabela, que define que através do spring poderemos consultar, inserir, atualizar e deletar cada um dos dados desses campos
 	public long getId() {
@@ -58,7 +62,13 @@ public class PostagemModel {
 		this.texto = texto;
 	}
 	
- 
+ public Date getDate() {
+	 return date;
+ }
+
+ public void setDate(Date date) {
+	 this.date = date;
+ }
 
 	
 	
