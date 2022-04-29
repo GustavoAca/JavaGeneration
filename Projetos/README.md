@@ -1,6 +1,8 @@
 # Projetos generation 2022
 
-## Jogo do milhão
-Tecnologia utilizada | Encerramento|Bloco 
-:--:|:---:|:--:
-Java | 14/04/2022|I
+Nome|Tecnologia utilizada | Encerramento|Bloco 
+:--|:--:|:---:|:--:
+ProjetoBloco1|Java | 14/04/2022|I
+ProjetoBlogPessoal| Spring| 29/04/2022| II
+
+
