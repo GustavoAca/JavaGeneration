@@ -1,14 +1,16 @@
 package com.generation.blogpessoal.model;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 //notação que define que o objeto criado vai ser uma tabela
 @Entity
@@ -37,6 +39,11 @@ public class PostagemModel {
 	
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 
+	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private TemaModel tema;
+	
 	//getters e setters dos atributos do nosso objeto/tabela, que define que através do spring poderemos consultar, inserir, atualizar e deletar cada um dos dados desses campos
 	public long getId() {
 		return id;
@@ -44,6 +51,22 @@ public class PostagemModel {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
+	}
+
+	public TemaModel getTema() {
+		return tema;
+	}
+
+	public void setTema(TemaModel tema) {
+		this.tema = tema;
 	}
 
 	public String getTitulo() {
@@ -62,13 +85,7 @@ public class PostagemModel {
 		this.texto = texto;
 	}
 	
- public Date getDate() {
-	 return data;
- }
 
- public void setDate(Date data) {
-	 this.data = data;
- }
 
 	
 	
