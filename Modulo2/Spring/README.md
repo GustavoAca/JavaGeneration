@@ -2,4 +2,5 @@
 
 Nome |Assunto|Entrega
 :--:|:--:|:--:
-Helloworld|Primeiro contato, e usando controller|27/04/2022
+Helnoloworld|Primeiro contato, e usando controller|27/04/2022
+TreinoSpring| Pratica para criar o CRUD| 05/05/2022
