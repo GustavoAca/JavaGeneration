@@ -53,7 +53,10 @@ public class PostagemController {
 		
 		@PutMapping
 		public ResponseEntity<PostagemModel> put (@RequestBody PostagemModel postagem){
-			return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
+			return repository.findById(postagem.getId())
+					.map(resposta -> ResponseEntity.ok().body(repository.save(postagem)))
+					.orElse(ResponseEntity.notFound().build());
+
 			//Para utilizar o put no postman, devemos copiar todos os dados, ex: titulo,id e texto, e colar no json, para alterar
 		}
 		
