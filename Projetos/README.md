@@ -3,6 +3,6 @@
 Nome|Tecnologia utilizada | Encerramento|Bloco 
 :--|:--:|:---:|:--:
 ProjetoBloco1|Java | 14/04/2022|I
-ProjetoBlogPessoal| Spring| | II
+ProjetoBlogPessoal| Spring/ Insomnia/ postman/ MySQL| | II
 
 
