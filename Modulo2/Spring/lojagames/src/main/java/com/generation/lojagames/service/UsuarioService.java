@@ -1,4 +1,6 @@
-package com.generation.blogpessoal.service;
+package com.generation.lojagames.service;
+
+
 
 import java.nio.charset.Charset;
 import java.util.Optional;
@@ -8,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.generation.blogpessoal.model.UsuarioLogin;
-import com.generation.blogpessoal.model.UsuarioModel;
-import com.generation.blogpessoal.repository.UsuarioRepository;
+import com.generation.lojagames.model.UsuarioLogin;
+import com.generation.lojagames.model.UsuarioModel;
+import com.generation.lojagames.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
@@ -37,7 +39,6 @@ public class UsuarioService {
 
 		// procurar usuario por id
 		if (repository.findById(usuario.getId()).isPresent()) {
-
 			// criptografar a senha nova
 			usuario.setSenha(criptografarSenha(usuario.getSenha()));
 

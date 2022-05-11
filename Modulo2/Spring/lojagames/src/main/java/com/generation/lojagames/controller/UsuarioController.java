@@ -1,4 +1,4 @@
-package com.generation.blogpessoal.controller;
+package com.generation.lojagames.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.generation.blogpessoal.model.UsuarioLogin;
-import com.generation.blogpessoal.model.UsuarioModel;
-import com.generation.blogpessoal.repository.UsuarioRepository;
-import com.generation.blogpessoal.service.UsuarioService;
+import com.generation.lojagames.model.UsuarioLogin;
+import com.generation.lojagames.model.UsuarioModel;
+import com.generation.lojagames.repository.UsuarioRepository;
+import com.generation.lojagames.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -37,7 +37,6 @@ public class UsuarioController {
 
 	@GetMapping("/all")
 	public ResponseEntity<List<UsuarioModel>> getAll() {
-
 		return ResponseEntity.ok(usuarioRepository.findAll());
 
 	}
@@ -57,10 +56,9 @@ public class UsuarioController {
 
 	}
 
-	@PutMapping()
+	@PutMapping
 	public ResponseEntity<UsuarioModel> putUsuario(@Valid @RequestBody UsuarioModel usuario) {
-		return usuarioService.atualizarUsuario(usuario)
-				.map(resp -> ResponseEntity.status(HttpStatus.OK).body(resp))
+		return usuarioService.atualizarUsuario(usuario).map(resp -> ResponseEntity.status(HttpStatus.OK).body(resp))
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
 
