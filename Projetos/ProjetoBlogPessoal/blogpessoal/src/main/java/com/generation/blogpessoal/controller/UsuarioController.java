@@ -59,7 +59,8 @@ public class UsuarioController {
 
 	@PutMapping
 	public ResponseEntity<UsuarioModel> putUsuario(@Valid @RequestBody UsuarioModel usuario) {
-		return ResponseEntity.status(HttpStatus.OK).body(usuarioRepository.save(usuario));
+		return usuarioService.atualizarUsuario(usuario).map(resp -> ResponseEntity.status(HttpStatus.OK).body(resp))
+				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
 
 	@DeleteMapping("/{id}")
