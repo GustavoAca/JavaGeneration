@@ -1,11 +1,12 @@
 package com.generation.blogpessoal.repository;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.Optional;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -51,6 +52,11 @@ public class UsuarioRepositoryTest {
 		assertTrue(listaDeUsuarios.get(0).getNome().equals("Dougles silva"));
 		assertTrue(listaDeUsuarios.get(1).getNome().equals("Michael silva"));
 		assertTrue(listaDeUsuarios.get(2).getNome().equals("Fernando silva"));
+	}
+
+	@AfterAll
+	public void end() {
+		usuarioRepository.deleteAll();
 	}
 
 }
