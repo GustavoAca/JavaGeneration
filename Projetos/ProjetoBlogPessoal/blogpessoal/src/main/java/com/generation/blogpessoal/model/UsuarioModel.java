@@ -1,7 +1,7 @@
 package com.generation.blogpessoal.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,80 +12,92 @@ import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 @Entity
 @Table(name = "tb_usuarios")
 public class UsuarioModel {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-	private String nome;
+  private String nome;
 
-	@NotNull
-	@Email(message = "O usuário deve ser um email valido ex:maria@email.com")
-	private String usuario;
+  @NotNull
+  @Email(message = "O usuário deve ser um email valido ex:maria@email.com")
+  private String usuario;
 
-	@NotNull
-	private String senha;
+  @NotNull
+  private String senha;
 
-	private String foto;
+  private String foto;
 
-	
-	//RELACIONAMENTO DE TABELAS
-	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("usuario")
-	private List<PostagemModel> postagem;
+  //RELACIONAMENTO DE TABELAS
+  @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+  @JsonIgnoreProperties("usuario")
+  private List<PostagemModel> postagem;
 
-	// getters e setter
-	public Long getId() {
-		return id;
-	}
+  //construtor
+  public  UsuarioModel(
+    long id,
+    String nome,
+    String usuario,
+    String senha
+  ) {
+    this.id = id;
+    this.nome = nome;
+    this.usuario = usuario;
+    this.senha = senha;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+  }
 
-	public String getNome() {
-		return nome;
-	}
+	public UsuarioModel(){}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+  // getters e setter
+  public Long getId() {
+    return id;
+  }
 
-	public String getUsuario() {
-		return usuario;
-	}
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
+  public String getNome() {
+    return nome;
+  }
 
-	public String getSenha() {
-		return senha;
-	}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+  public String getUsuario() {
+    return usuario;
+  }
 
-	public String getFoto() {
-		return foto;
-	}
+  public void setUsuario(String usuario) {
+    this.usuario = usuario;
+  }
 
-	public void setFoto(String foto) {
-		this.foto = foto;
-	}
+  public String getSenha() {
+    return senha;
+  }
 
-	public List<PostagemModel> getPostagem() {
-		return postagem;
-	}
+  public void setSenha(String senha) {
+    this.senha = senha;
+  }
 
-	public void setPostagem(List<PostagemModel> postagem) {
-		this.postagem = postagem;
-	}
+  public String getFoto() {
+    return foto;
+  }
 
+  public void setFoto(String foto) {
+    this.foto = foto;
+  }
+
+  public List<PostagemModel> getPostagem() {
+    return postagem;
+  }
+
+  public void setPostagem(List<PostagemModel> postagem) {
+    this.postagem = postagem;
+  }
 }

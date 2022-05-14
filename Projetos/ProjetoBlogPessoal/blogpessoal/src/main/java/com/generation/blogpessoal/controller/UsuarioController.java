@@ -57,7 +57,7 @@ public class UsuarioController {
 
 	}
 
-	@PutMapping()
+	@PutMapping("/atualizar")
 	public ResponseEntity<UsuarioModel> putUsuario(@Valid @RequestBody UsuarioModel usuario) {
 		return usuarioService.atualizarUsuario(usuario)
 				.map(resp -> ResponseEntity.status(HttpStatus.OK).body(resp))
