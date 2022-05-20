@@ -4,11 +4,13 @@ body {
   margin: 0%;
 }
 
-nav {
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: brown;
   margin: 0%;
   padding: 10px;
-
 }
 
 .navbar div img {
@@ -18,27 +20,11 @@ nav {
   margin-left: 20px;
 }
 
-
-
 h1 {
   color: red;
   margin: 0;
   margin-top: 15px;
   text-align: center;
-}
-
-
-.textmenu {
-  padding: 10px;
-  transition: all .5s;
-}
-
-.textmenu:hover {
-  color: white;
-  background-color: rgb(236, 236, 158);
-  border-radius: 10px;
-
-
 }
 
 a {
@@ -55,14 +41,16 @@ ul {
   justify-content: end;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-
+.textmenu {
+  padding: 10px;
+  transition: all 0.5s;
 }
 
+.textmenu:hover {
+  color: white;
+  background-color: rgb(236, 236, 158);
+  border-radius: 10px;
+}
 
 .container {
   display: flex;
@@ -76,6 +64,14 @@ h2 {
 .container-video {
   display: flex;
   margin: 50px;
+  width: 2500;
+  align-items: center;
+  justify-content: center;
+}
+.video{
+  display: flex;
+ 
+
 }
 
 .spaceimg img {
