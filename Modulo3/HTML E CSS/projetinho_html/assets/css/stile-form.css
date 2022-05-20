@@ -81,6 +81,7 @@ form [type="submit"]{
 
 form [type="submit"]:hover{
   cursor: pointer;
+  background-color:rgb(202, 43, 43);
  }
 
  input{
