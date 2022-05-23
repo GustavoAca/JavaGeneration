@@ -28,9 +28,11 @@
     <h1>Formulario</h1>
     <div class="container">
       <form>
-        <input type="text" placeholder="Nome:" /><br>
+        <input type="text" id="nome" placeholder="Nome:" onkeyup="validarNome()" /><br>
+        <div id="txtNome"></div>
         <input type="email" placeholder="E-mail:" /><br>
-        <input type="submit" value="Enviar >" />
+        <textarea rows="4" cols="50"></textarea>
+        <input type="submit" value="Enviar >" onclick="validar()" />
       </form>
 
 
@@ -39,5 +41,6 @@
       src="https://kit.fontawesome.com/bc1c56fe8e.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>
