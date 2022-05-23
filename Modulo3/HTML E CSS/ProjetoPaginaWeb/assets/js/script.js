@@ -21,10 +21,10 @@ function validaNome() {
   let txtNome = document.querySelector("#txtNome")
   if (nome.value.length < 3) {
     txtNome.innerHTML = "Nome invalido";
-    txtNome.style.color = 'red';
+    txtNome.style.color = '#c0392b';
   } else {
     txtNome.innerHTML = 'Nome valido';
-    txtNome.style.color = 'green';
+    txtNome.style.color = '#2ecc71';
     nomeOk = true;
   }
 }
@@ -34,11 +34,11 @@ function validaEmail() {
 
   if (email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1 || email.value.indexOf('com') == -1 ) {
     txtEmail.innerHTML = 'Email inválido';
-    txtEmail.style.color = 'red';
+    txtEmail.style.color = '#c0392b';
   } else 
   {
     txtEmail.innerHTML = 'Email válido';
-    txtEmail.style.color = 'green';
+    txtEmail.style.color = '#2ecc71';
     emailOk = true;
   }
 }
@@ -48,7 +48,7 @@ function validaAssunto (){
 
   if(assunto.value.length>=100){
     txtAssunto.innerHTML = 'O texto é muito grande, digite no máximo 100 caracteres';
-    txtAssunto.style.color = 'red';
+    txtAssunto.style.color = '#c0392b';
     txtAssunto.style.display = 'block';
   }
   else{
