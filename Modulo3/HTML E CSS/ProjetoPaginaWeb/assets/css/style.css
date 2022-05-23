@@ -1,19 +1,43 @@
 /*Estilo da pagina index.html*/
+*{
+  padding: 0%;
+  margin: 0%;
+}
+body{
+  background-color:#95a5a6;
+}
 
+#menu {
+  background-color: #8e44ad;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+#menu li img {
+  width: 80px;
+}
 
 #menu li {
   display:  inline;
   padding: 30px;
+  
 }
 
 #menu li a {
   text-decoration: none;
-  transition: .5s ;
+  transition:all  .5s ;
   font-size: 20px;
+  color: #ecf0f1;
+  padding: 10px;
 }
 
 #menu li a:hover {
-    color: red;
+    color: #ecf0f1;
+    background-color: #9b59b6;
+    border-radius: 10px;
+   
+
 }
 
   .container {
@@ -55,15 +79,9 @@ flex-direction: column;
 
 .github {
   color: #000;
-  padding: 15px;
-  transition: all 0.5s;
+  margin: 20px;
 }
 
-.github:hover {
-  background-color: gray;
-  border-radius: 10px;
-
-}
 
 i {
   font-size: 25px;
@@ -72,4 +90,24 @@ i {
 /*Estilo da pagina contato.html*/
 .ml-50 {
   margin-left: 50px;
+}
+
+#botaoEnv {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #8e44ad;
+  transition: all .5s;
+}
+
+#botaoEnv:hover {
+  cursor: pointer;
+  background-color: #9b59b6;
+  font-size: 20px;
+}
+
+.botao {
+  border-radius: 20px;
+  padding: 10px;
+  transition: all .5s;
+  background-color: #bdc3c7;
 }
