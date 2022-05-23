@@ -1,0 +1,74 @@
+/*Estilo da pagina index.html*/
+
+#menu li {
+  display:  inline;
+  padding: 30px;
+}
+
+#menu li a {
+  text-decoration: none;
+  transition: .5s ;
+  font-size: 20px;
+}
+
+#menu li a:hover {
+    color: red;
+}
+
+  .container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .center {
+    text-align: center;
+  }
+
+  .justify{
+    text-align: justify;
+  }
+
+.p-30 {
+  padding: 30px;
+}
+
+.br-50 {
+  border-radius: 50%;
+}
+
+.wh {
+  width: 300px;
+}
+
+.mb-50{
+margin-bottom: 50px;
+}
+
+footer {
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.github {
+  color: #000;
+  padding: 15px;
+  transition: all 0.5s;
+}
+
+.github:hover {
+  background-color: gray;
+  border-radius: 10px;
+
+}
+
+i {
+  font-size: 25px;
+}
+
+/*Estilo da pagina contato.html*/
+.ml-50 {
+  margin-left: 50px;
+}
