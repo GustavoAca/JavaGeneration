@@ -7,10 +7,120 @@
 
 .ac {
   text-align: center;
+  width: 100%;
 }
 
 .img-padrao-200 {
   width: 200px;
   height: 200px;
 
+}
+
+.fu {
+  background-color: white;
+}
+
+.navbar {
+  background-color: rgba(128, 128, 128,.5) !important;
+}
+
+
+a,tudo {
+  color: white !important;
+}
+
+.droM {
+  background-color:rgba(128, 128, 128,.5) ; 
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+}
+
+i {
+  font-size: 50px;
+  padding: 3px;
+  /* Primeiro passo: definir um degradê como fundo */
+  background-image: linear-gradient(to bottom, #00ffff, rgb(65, 145, 49));
+  
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+  
+}
+
+.footer {
+  background-color: black ;
+}
+
+
+/*Card*/
+
+#todoCard {
+  background-image: linear-gradient(to right, rgb(65, 145, 49) , #00ffff);
+}
+
+
+#carouselExampleControls {
+margin: 50px;
+
+}
+
+
+.container-card{
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+
+
+.cards-re {
+  border: 2px solid;
+}
+
+h2 {
+  text-align: center;
+
+}
+
+ .card-body{
+  background-color: rgba(128, 128, 128,.5);
+}
+
+/*Form*/
+
+.container-form {
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 600px;
+ text-align: center;
+
+}
+
+.mostrarSenha {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 10px;
+
+}
+
+.formulario {
+  border: 2px solid rgba(0, 0, 0, .5);
+  border-radius: .5em;
+}
+
+.form-control {
+  border-radius: 10px !important;
+}
+
+p{
+  padding-left: 15px;
 }

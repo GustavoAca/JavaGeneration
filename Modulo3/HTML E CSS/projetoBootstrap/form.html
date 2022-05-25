@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Formulario</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -33,7 +33,6 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -41,13 +40,13 @@
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="form.html">Formulario</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="form.html">Formulário</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="video.html">Videos</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item active dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -58,19 +57,19 @@
             >
               Compre
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu droM" aria-labelledby="navbarDropdown">
               <a
-                class="dropdown-item ce"
+                class="dropdown-item"
                 href="https://www.latostadora.com/camisetas/one+piece/"
                 >Camisetas</a
               >
               <a
-                class="dropdown-item ce"
+                class="dropdown-item"
                 href="https://lista.mercadolivre.com.br/caneca-one-piece"
                 >Canecas</a
               >
               <a
-                class="dropdown-item ce"
+                class="dropdown-item"
                 href="https://latiendaonepiece.com/figuras/"
                 >Figura</a
               >
@@ -91,56 +90,73 @@
       </div>
     </nav>
     <!--Navbar-->
-    <h2 class="ac pd-15">Videos</h2>
-    <div class="modal-dialog modal-xl">
-      <div class="container">
-        <div class="row">
-          <div class="col pd-b-15">
-            <iframe
-              width="500"
-              height="315"
-              src="https://www.youtube.com/embed/IJnKepwmnhQ"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="col">
-            <iframe
-              width="500"
-              height="315"
-              src="https://www.youtube.com/embed/IJnKepwmnhQ"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+
+    <!--Form-->
+    <div class="container-form">
+      <form class="p-5 formulario">
+        <h2 class="pt-2 pb-2">Formulário</h2>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control em1 visu1"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password again</label>
+          <input
+            onkeyup="verSenha()"
+            type="password"
+            class="form-control em2 visu2"
+            id="exampleInputPassword1"
+          />
+          <div style="font-size: 14px" id="txError"></div>
+          <div class="mostrarSenha">
+            <input id="botaoSenha" type="checkbox" onclick="mostraSenha()" />
+            <p>Mostrar senha</p>
           </div>
         </div>
-      </div>
-    </div>
 
+        <button onclick="enviarForm()" type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
+    <!--Form-->
     <!--Footer-->
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Gustavo dos Anjos</h5>
+    <footer>
+      <div class="card text-center">
+        <div class="card-body ">
+          <h5 class="card-title ">Gustavo dos Anjos</h5>
 
-        <a href="https://github.com/GustavoAca"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/gustavo-acacio-9876631a1/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
+          <a href="https://github.com/GustavoAca"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/gustavo-acacio-9876631a1/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
       </div>
-    </div>
+    </footer>
     <!--Footer-->
 
     <script
       src="https://kit.fontawesome.com/bc1c56fe8e.js"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -156,5 +172,6 @@
       integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
