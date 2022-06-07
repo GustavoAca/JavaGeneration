@@ -20,89 +20,97 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @Table(name = "tb_usuarios")
 public class UsuarioModel {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-  private String nome;
+	private String nome;
 
-  @Schema(example = "email@email.com.br")
-  @NotNull
-  @Email(message = "O usuário deve ser um email valido ex:maria@email.com")
-  private String usuario;
+	@Schema(example = "email@email.com.br")
+	@NotNull
+	@Email(message = "O usuário deve ser um email valido ex:maria@email.com")
+	private String usuario;
 
-  @NotNull
-  private String senha;
+	@NotNull
+	private String senha;
 
-  private String foto;
+	private String foto;
 
-  //RELACIONAMENTO DE TABELAS
-  @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-  @JsonIgnoreProperties("usuario")
-  private List<PostagemModel> postagem;
+	private String tipo;
 
-  //construtor
-  public  UsuarioModel(
-    long id,
-    String nome,
-    String usuario,
-    String senha
-  ) {
-    this.id = id;
-    this.nome = nome;
-    this.usuario = usuario;
-    this.senha = senha;
+	// RELACIONAMENTO DE TABELAS
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("usuario")
+	private List<PostagemModel> postagem;
+	
 
-  }
+	// construtor
+	public UsuarioModel(long id, String nome, String usuario, String senha) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
 
-	public UsuarioModel(){}
+	}
 
-  // getters e setter
-  public Long getId() {
-    return id;
-  }
+	public UsuarioModel() {
+	}
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+	// getters e setter
+	public Long getId() {
+		return id;
+	}
 
-  public String getNome() {
-    return nome;
-  }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
+	public String getNome() {
+		return nome;
+	}
 
-  public String getUsuario() {
-    return usuario;
-  }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-  public void setUsuario(String usuario) {
-    this.usuario = usuario;
-  }
+	public String getUsuario() {
+		return usuario;
+	}
 
-  public String getSenha() {
-    return senha;
-  }
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
 
-  public void setSenha(String senha) {
-    this.senha = senha;
-  }
+	public String getSenha() {
+		return senha;
+	}
 
-  public String getFoto() {
-    return foto;
-  }
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 
-  public void setFoto(String foto) {
-    this.foto = foto;
-  }
+	public String getFoto() {
+		return foto;
+	}
 
-  public List<PostagemModel> getPostagem() {
-    return postagem;
-  }
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
 
-  public void setPostagem(List<PostagemModel> postagem) {
-    this.postagem = postagem;
-  }
+	public List<PostagemModel> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<PostagemModel> postagem) {
+		this.postagem = postagem;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
 }
