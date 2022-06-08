@@ -41,6 +41,11 @@ public class UsuarioController {
 		return ResponseEntity.ok(usuarioRepository.findAll());
 
 	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<UsuarioModel> getById(@PathVariable Long id){
+		return usuarioRepository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	}
 
 	@PostMapping("/logar")
 	public ResponseEntity<UsuarioLogin> login(@RequestBody Optional<UsuarioLogin> user) {
