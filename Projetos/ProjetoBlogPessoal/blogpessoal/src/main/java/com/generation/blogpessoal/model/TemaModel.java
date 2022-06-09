@@ -20,7 +20,7 @@ public class TemaModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@NotNull
+	
 	public String descricao;
 	
 	@OneToMany(mappedBy="tema",cascade = CascadeType.ALL)
