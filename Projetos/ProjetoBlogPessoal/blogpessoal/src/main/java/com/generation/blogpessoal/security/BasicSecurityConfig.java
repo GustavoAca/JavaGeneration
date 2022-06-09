@@ -150,10 +150,19 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		 * 
 		 */
 
-		http.authorizeRequests().antMatchers("/usuarios/logar").permitAll().antMatchers("/usuarios/cadastrar")
-				.permitAll().antMatchers(HttpMethod.OPTIONS).permitAll().anyRequest().authenticated().and().httpBasic()
-				.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().cors().and()
-				.csrf().disable();
+		http.authorizeRequests()
+			.antMatchers("/**").permitAll()
+			.antMatchers("/usuarios/logar")
+			.permitAll().antMatchers("/usuarios/cadastrar").permitAll()
+			.antMatchers(HttpMethod.GET ,"/postagens").permitAll()
+			.antMatchers(HttpMethod.GET ,"/tema").permitAll()
+			.antMatchers(HttpMethod.OPTIONS).permitAll()
+			.anyRequest().authenticated()
+			.and().httpBasic()
+			.and().sessionManagement()
+			.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+			.and().cors()
+			.and().csrf().disable();
 
 	}
 }
